@@ -1,0 +1,102 @@
+/* Imported styles */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700');
+@import url(bootstrap.min.css);
+/*==============================================
+   Base Css
+===============================================*/
+html, body { height: 100% }
+body { font-family: 'Hind', sans-serif; font-size: 16px; color: #848484; line-height: 26px; font-weight: 300; }
+button:focus { outline: none; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; margin: 0; }
+h3 { color: #222222; font-size: 20px; font-weight: 400; }
+.float_left { float: left; }
+.float_right { float: right; }
+h4 { }
+a, a:hover, a:active, a:focus { transition: all 0.5s ease 0s; text-decoration: none; outline: none; color: #fff; }
+ul, li { list-style: none; margin: 0; padding: 0; }
+.boxed_wrapper { background: #fff none repeat scroll 0 0; position: relative; margin: 0 auto; width: 100%; min-width: 320px; min-height: 400px; overflow: hidden; }
+/* Update Mainmenu area Style */
+@-webkit-keyframes menu_sticky {  0% {margin-top:-150px;} 50% {margin-top: -130px;} 100% {margin-top: 0;}}
+@keyframes menu_sticky {  0% {margin-top:-150px;} 50% {margin-top: -130px;} 100% {margin-top: 0;}}
+.mainmenu-area.stricky-fixed { position: fixed; top: 0; left: 0; margin: 0; width: 100%; z-index: 10000; background: #F7F7F7; z-index: 99999; -webkit-animation-name: menu_sticky; animation-name: menu_sticky; -webkit-animation-duration: 0.60s; animation-duration: 0.60s; -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; }
+/*==============================================
+    Mainmenu Area Css
+===============================================*/
+.mainmenu-area { position: relative; z-index: 99; background: #ecebeb; }
+.mainmenu-area .mainmenu-bg { /* background: #f7f7f7;*/
+}
+.mainmenu-area .logo { display: inline-block; padding-right: 40px; padding-top: 22px; padding-bottom: 23px; padding-left: 30px; }
+.mainmenu-area .logo a { display: inline-block; }
+.main-menu { float: left; position: relative; }
+.main-menu .navbar-collapse { padding: 0px }
+.main-menu .navigation { float: left; margin: 0; position: relative; }
+.main-menu .navigation li { display: inline-block; float: left; }
+.main-menu .navigation li a { color: #222222; display: block; font-size: 14px; font-weight: 600; line-height: 20px; opacity: 1; padding: 36px 18px 34px; position: relative; text-transform: uppercase; transition: all 500ms ease 0s; font-family: 'Poppins', sans-serif; }
+.main-menu .navigation > li:hover > a, .main-menu .navigation > li.current > a { color: #45c4e9; }
+.main-menu .navigation > li.dropdown > a { }
+.main-menu .navigation > li.dropdown > a:after { }
+.main-menu .navigation > li > a:before { position: absolute; bottom: 0px; left: 0; width: 0%; height: 3px; background: #48c7ec; content: ""; transition: all 500ms ease; -moz-transition: all 500ms ease; -webkit-transition: all 500ms ease; -ms-transition: all 500ms ease; -o-transition: all 500ms ease; }
+.main-menu .navigation > li:hover a:before, .main-menu .navigation > li.current a:before { width: 100%; }
+.main-menu .navigation > li > ul { position: absolute; left: 0px; top: 130%; width: 250px; padding: 0px; z-index: 100; visibility: hidden; opacity: 0; z-index: 99; transition: all 500ms ease; border-top: 10px solid transparent; border-bottom: 3px solid #45c4e9; }
+.main-menu .navigation > li:hover > ul { top: 100%; opacity: 1; visibility: visible; }
+.main-menu .navigation > li > ul > li { clear: both; width: 100%; position: relative; border-bottom: 1px solid #f4f4f4; }
+.main-menu .navigation > li > ul > li:last-child { border-bottom: 0px solid #f4f4f4; }
+.main-menu .navigation > li > ul > li > a { width: 100%; background: #ffffff; padding: 13px 15px 11px 48px; color: #222222; font-size: 14px; font-weight: 400; text-transform: capitalize; display: block; float: left; clear: both; position: relative; outline: 0; transition: padding .2s linear; transition: all 500ms ease; font-family: 'Poppins', sans-serif; }
+.main-menu .navigation > li > ul > li > a:before { position: absolute; left: 30px; top: 13px; font-size: 10px; color: #d6d6d6; content: "\f192"; font-family: FontAwesome; -webkit-transition: .5s ease; transition: .5s ease; }
+.main-menu .navigation > li > ul > li:hover > a { color: #45c4e9; background: #f7f7f7; }
+.main-menu .navigation > li > ul > li:hover > a:before { color: #45c4e9; }
+.main-menu .navigation > li > ul > li.dropdown > a:after { }
+.main-menu .navigation > li > ul > li.dropdown:hover > a:after { }
+.main-menu .navigation > li > ul > li > ul { }
+.main-menu .navigation > li > ul li:hover ul { }
+.main-menu .navigation > li > ul > li ul li { }
+.main-menu .navigation > li > ul > li ul li:first-child { }
+.main-menu .navigation > li > ul > li ul li a { }
+.main-menu .navigation > li > ul > li > ul > li:hover > a { }
+.main-menu .navbar-collapse > ul li.dropdown .dropdown-btn { position: absolute; right: 10px; top: 6px; width: 34px; height: 30px; border: 1px solid #ffffff; background: url(../images/submenu-icon.png) center center no-repeat; background-size: 20px; cursor: pointer; z-index: 5; display: none; border-radius: 3px; -webkit-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; -moz-border-radius: 3px; }
+.mainmenu-right-box { }
+.mainmenu-area .quote-button { float: right; }
+.mainmenu-area .quote-button a { background: #45c4e9; display: inline-block; text-align: center; color: #ffffff; font-size: 14px; font-weight: 600; text-transform: uppercase; line-height: 90px; transition: all 500ms ease; font-family: 'Poppins', sans-serif; display: block; padding: 0 20px; }
+.mainmenu-area .quote-button a:hover { background: #1b1b1b; }
+
+/*****----Responsive--css------***/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+.mainmenu-area .logo { padding-right: 25px; padding-top: 22px; padding-bottom: 23px; padding-left: 10px; }
+.main-menu .navigation li a { padding: 36px 8px 34px; font-size: 13px; }
+.mainmenu-area .quote-button a { padding: 0 8px; font-size: 12px; }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+.mainmenu-area { background: #F7F7F7; }
+.mainmenu-area .logo { display: block; padding-right: 0; padding-left: 0; padding-top: 20px; padding-bottom: 20px; float: none !important; text-align: center; }
+.main-menu .navigation li a { padding: 25px 9px 23px; }
+.mainmenu-area .quote-button a { line-height: 68px; padding: 0 15px; }
+}
+@media only screen and (max-width: 767px) {
+.mainmenu-area { background: #F7F7F7; }
+.mainmenu-area .logo { display: inline-block; padding-right: 10px; padding-top: 20px; padding-bottom: 20px; padding-left: 0; }
+.mainmenu-right-box { position: absolute; top: 0; right: 70px; z-index: 99999; }
+.mainmenu-area .quote-button { display: none; }
+.mainmenu-area .quote-button a { line-height: 60px; padding: 0 15px; margin: 0; }
+.main-menu { display: block; float: none !important; padding-bottom: 0; padding-top: 0; z-index: 5; width: 100%; }
+.main-menu .navigation li { margin-left: 0; margin-right: 0; padding: 0; }
+.main-menu .collapse { border: 0px solid #eabb06 !important; border-radius: 0px !important; float: none; margin: 0; max-height: 300px; overflow: auto; padding: 0; width: 100%; }
+.main-menu .collapse.in, .main-menu .collapsing { border: 0px solid #4b4b4b; border-radius: 3px; margin: 0 0 20px; padding: 0; border-top: none; }
+.main-menu .navbar-header { position: relative; float: none; display: block; text-align: right; width: 100%; padding: 0; right: 0px; z-index: 12; }
+.main-menu .navbar-header .navbar-toggle { display: inline-block; z-index: 7; border: 2px solid #222222; float: none; margin: 23px 0; border-radius: 0; padding: 10px 9px; }
+.main-menu .navbar-header .navbar-toggle .icon-bar { background: #45c4e9 none repeat scroll 0 0; font-weight: 700; }
+.main-menu .navbar-collapse > .navigation { background: #45c4e9; float: none !important; margin: 0 !important; width: 100% !important; }
+.main-menu .navbar-collapse > .navigation > li { margin: 0px !important; float: none !important; width: 100%; padding: 0; }
+.main-menu .navbar-collapse .navigation > li > ul > li { border-bottom: 0px solid #2b2b2b; }
+.main-menu .navigation li.dropdown > a:after { display: none !important; }
+.main-menu .navigation > li > a:before { display: none; }
+.main-menu .navbar-collapse > .navigation > li > a { padding: 10px 10px !important; }
+.main-menu .navbar-collapse > .navigation > li > ul, .main-menu .navbar-collapse > .navigation > li > ul > li > ul { position: relative; border: none; float: none; visibility: visible; opacity: 1; display: none; margin: 0px; left: auto !important; right: auto !important; top: auto !important; width: 100%; background: none; border-radius: 0px; -webkit-border-radius: 0px; -ms-border-radius: 0px; -o-border-radius: 0px; -moz-border-radius: 0px; transition: none !important; -webkit-transition: none !important; -ms-transition: none !important; -o-transition: none !important; -moz-transition: none !important; }
+.main-menu .navbar-collapse > .navigation > li > ul, .main-menu .navbar-collapse > .navigation > li > ul > li > ul { border-top: 0px solid rgba(255,255,255,1) !important; }
+.main-menu .navbar-collapse > .navigation > li, .main-menu .navbar-collapse > .navigation > li > ul > li, .main-menu .navbar-collapse > .navigation > li > ul > li > ul > li { border-top: 1px solid #36b4d9 !important; opacity: 1 !important; top: 0px !important; left: 0px !important; visibility: visible !important; }
+.main-menu .navbar-collapse > .navigation > li:last-child, .main-menu .navbar-collapse > .navigation > li > ul > li:last-child, .main-menu .navbar-collapse > .navigation > li > ul > li > ul > li:last-child { border-top: 1px solid #36b4d9 !important; }
+.main-menu .navbar-collapse > .navigation > li > a, .main-menu .navbar-collapse > .navigation > li > ul > li > a, .main-menu .navbar-collapse > .navigation > li > ul > li > ul > li > a { padding: 10px 10px !important; line-height: 22px; color: #222222; background: #45c4e9; text-align: left; }
+.main-menu .navbar-collapse .navigation > li > ul li a::before { display: none; }
+.main-menu .navbar-collapse > .navigation > li:hover > a, .main-menu .navbar-collapse > .navigation > li > ul > li:hover > a, .main-menu .navbar-collapse > .navigation > li > ul > li > ul > li:hover > a, .main-menu .navbar-collapse > .navigation > li.current > a { background: #222222; color: #fff !important; }
+.main-menu .navbar-collapse > .navigation li.dropdown .dropdown-btn { display: block; }
+}
